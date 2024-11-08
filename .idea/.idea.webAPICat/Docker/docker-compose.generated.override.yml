@@ -1,0 +1,21 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  webapicat:
+    build:
+      context: "C:\\Users\\elias\\RiderProjects\\webAPICat"
+      dockerfile: "webAPICat/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/webAPICat.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "webapicat:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\elias\\.nuget\\packages:/home/app/.nuget/packages"
+    - "C:\\Users\\elias\\RiderProjects\\webAPICat\\webAPICat:/app:rw"
+    - "C:\\Users\\elias\\RiderProjects\\webAPICat:/src:rw"
+    working_dir: "/app"

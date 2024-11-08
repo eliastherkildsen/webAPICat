@@ -1,0 +1,6 @@
+﻿services:
+  webapicat:
+    image: webapicat
+    build:
+      context: .
+      dockerfile: webAPICat/Dockerfile
